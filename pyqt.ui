@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>820</width>
+    <width>827</width>
     <height>326</height>
    </rect>
   </property>
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>801</width>
-      <height>261</height>
+      <y>40</y>
+      <width>821</width>
+      <height>241</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -35,7 +35,7 @@
           </size>
          </property>
          <property name="title">
-          <string>GroupBox</string>
+          <string>People</string>
          </property>
          <widget class="QListWidget" name="listWidgetPeople">
           <property name="geometry">
@@ -43,7 +43,7 @@
             <x>10</x>
             <y>20</y>
             <width>160</width>
-            <height>80</height>
+            <height>171</height>
            </rect>
           </property>
          </widget>
@@ -52,15 +52,15 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>GroupBox</string>
+          <string>Personal Information</string>
          </property>
          <widget class="QWidget" name="horizontalLayoutWidget_2">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>10</y>
-            <width>534</width>
-            <height>115</height>
+            <width>595</width>
+            <height>196</height>
            </rect>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -90,6 +90,9 @@
               <layout class="QFormLayout" name="formLayout">
                <property name="sizeConstraint">
                 <enum>QLayout::SetMinAndMaxSize</enum>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
                </property>
                <item row="0" column="0">
                 <widget class="QLabel" name="label_2">
@@ -124,24 +127,46 @@
             </widget>
            </item>
            <item>
-            <widget class="QListWidget" name="listWidgetParents">
-             <property name="minimumSize">
-              <size>
-               <width>160</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Families</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="PersonDataFamilies">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
-            <widget class="QListWidget" name="listWidgetSiblings">
-             <property name="minimumSize">
-              <size>
-               <width>160</width>
-               <height>0</height>
-              </size>
-             </property>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>People in family</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="PersonDataFamily">
+               <property name="minimumSize">
+                <size>
+                 <width>160</width>
+                 <height>0</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>
@@ -151,13 +176,26 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="LoadFile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load File</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>820</width>
+     <width>827</width>
      <height>21</height>
     </rect>
    </property>
