@@ -1,25 +1,37 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5.QtWidgets import QMainWindow, QFileDialog
+from PyQt5 import uic
 import sys
 import GedcomParser
+from FamTreeViewWindow import FamTreeViewerWindow
 
-class MainWindow(QtWidgets.QMainWindow):
+class MainWindow(QMainWindow):
 
 
-    def __init__(self):
+    def __init__(self,file_path=None):
         super(MainWindow,self).__init__()
         uic.loadUi("pyqt.ui",self)
         self.SetupUIConnections()
         self.show()
+        if(not file_path == None):
+            self.file_path = file_path
+            self.FillPersonList()
 
     def SetupUIConnections(self):
-        self.listWidgetPeople.itemSelectionChanged.connect(self.NewPersonSelected)
+        #buttons
         self.LoadFile.clicked.connect(self.LoadFileFunc)
+        self.ShowTreeWindowButton.clicked.connect(self.OpenFamilyTreeWindow)
+        #Data 
+        self.listWidgetPeople.itemSelectionChanged.connect(self.NewPersonSelected)
         self.PersonDataFamilies.itemSelectionChanged.connect(self.NewFamilySelected)
 
     def LoadFileFunc(self):
-        file_path,_ = QtWidgets.QFileDialog.getOpenFileName(self,"Open file")
+        file_path,_ = QFileDialog.getOpenFileName(self,"Open file")
         self.file_path = file_path
         self.FillPersonList()
+
+    def OpenFamilyTreeWindow(self):
+        self.familyWindow = FamTreeViewerWindow()
+        self.familyWindow.show()
 
     def FillPersonList(self):
         

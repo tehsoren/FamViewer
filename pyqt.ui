@@ -176,18 +176,31 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="LoadFile">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>75</width>
-      <height>23</height>
+      <width>175</width>
+      <height>25</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Load File</string>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="LoadFile">
+       <property name="text">
+        <string>Load File</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ShowTreeWindowButton">
+       <property name="text">
+        <string>Show Family Tree</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
